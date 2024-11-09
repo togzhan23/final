@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="book-details" class="mt-5">
+            <h1>Loading book details...</h1>
+            <div id="book-info"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Get the ISBN from the URL query parameters
+            var urlParams = new URLSearchParams(window.location.search);
+            var isbn = urlParams.get('isbn'); // Get the 'isbn' from the URL
+
+            if (isbn) {
+                fetchBookDetails(isbn);
+            } else {
+                $("#book-info").html("<p>No book found. Invalid ISBN parameter.</p>");
+            }
+
+            // Function to fetch book details using Google Books API
+            function fetchBookDetails(isbn) {
+                var apiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`;
+                
+                $.ajax({
+                    url: apiUrl,
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.totalItems > 0) {
+                            var book = response.items[0].volumeInfo;
+                            displayBookInfo(book);
+                        } else {
+                            $("#book-info").html("<p>Book not found. Try another ISBN.</p>");
+                        }
+                    },
+                    error: function() {
+                        $("#book-info").html("<p>There was an error fetching the book details. Try again later.</p>");
+                    }
+                });
+            }
+
+            // Function to display book details
+            function displayBookInfo(book) {
+                var title = book.title || 'No title available';
+                var author = book.authors ? book.authors.join(', ') : 'No authors available';
+                var publisher = book.publisher || 'No publisher available';
+                var description = book.description || 'No description available';
+                var image = book.imageLinks ? book.imageLinks.thumbnail : 'https://via.placeholder.com/150';
+                var link = book.previewLink || '#';
+
+                var bookHtml = `
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="${image}" class="img-fluid" alt="Book Cover">
+                        </div>
+                        <div class="col-md-8">
+                            <h2>${title}</h2>
+                            <p><strong>Author(s):</strong> ${author}</p>
+                            <p><strong>Publisher:</strong> ${publisher}</p>
+                            <p><strong>Description:</strong> ${description}</p>
+                            <a href="${link}" target="_blank" class="btn btn-primary">Read Preview</a>
+                        </div>
+                    </div>
+                `;
+
+                // Append the book details to the book-info container
+                $("#book-info").html(bookHtml);
+            }
+        });
+    </script>
+</body>
+</html>

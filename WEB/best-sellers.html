@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>best-sellers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <style>
+        .book-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: scale(1.02); 
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgba(236,232,231,1) 16%, rgba(217,206,199,0.9262079831932774) 69%);
+        }
+    
+        header {
+            background-color: #1e1d1d; 
+            color: rgb(255, 255, 255);
+            padding: 1rem;
+            text-align: center;
+        }
+    
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+    
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+    
+        section {
+            margin: 20px;
+        }
+    
+        .card {
+            height: 100%; 
+        }
+    
+        
+        footer {
+            background-color: #1e1d1d;
+            text-align: center; 
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        .social-icons {
+            margin-top: 20px;
+        }
+    
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    
+        @media (max-width: 600px) {
+            .book-item {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .book-item img {
+                margin-bottom: 10px;
+            }
+        }
+        header {
+          background-color: #1e1d1d; 
+          color: rgb(255, 255, 255);
+          padding: 1rem; /* Reduced padding to make it more compact */
+          text-align: center;
+        }
+        
+        h2 {
+          font-size: 1.8rem; /* Slightly smaller logo size */
+          margin-bottom: 1rem; /* Reduced space between logo and nav */
+        }
+        
+        /* Navigation styling */
+        nav {
+          margin-bottom: 0.5rem; /* Reduced space between nav and controls */
+        }
+        
+        nav ul {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          margin: 0;
+        }
+        
+        nav li {
+          list-style: none;
+          margin: 0 8px; /* Reduced horizontal margin between items */
+        }
+        
+        nav a {
+          text-decoration: none;
+          color: #fff; /* White text color for navigation */
+          font-weight: 500;
+        }
+        
+        nav a:hover {
+          color: #0073e6;
+        }
+        
+        /* Controls on the right */
+        .controls {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 10px; /* Positioning controls on the right */
+          top: 10px; /* Positioning controls towards the top */
+          gap: 8px; /* Reduced gap between icons */
+        }
+        
+        .profile-icon {
+          width: 37px; /* Smaller icons */
+          height: 37px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        
+        
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-column align-items-center top-bar">
+        
+          <h2>Bookverse</h2>
+    
+          <nav>
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="genres.html">Book Genres</a></li>
+              <li><a href="best-sellers.html">Best Sellers</a></li>
+              <li><a href="recommendations.html">Recommendations</a></li>
+              <li><a href="test.html">Finder</a></li>
+
+            </ul>
+          </nav>
+      
+          
+          <div class="controls d-flex align-items-center">
+            <a href="profile.html">
+              <img class="profile-icon" src="https://i.ibb.co/ZJG8B5H/user-profile-icon-free-vector.jpg" alt="Profile Icon">
+            </a>
+          </div>
+        </div>
+      </header>
+
+    
+    
+    <main>
+        <section id="best-sellers">
+            <h2>Best-seller books of all time! </h2>
+            <hr>
+            
+            <div class="book-item">
+                <a href="https://www.gutenberg.org/ebooks/996">
+                    <img src="https://i.ibb.co/c2mkS2y/pg996-cover-medium.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.gutenberg.org/ebooks/996">Don Quixote</a></h3>
+                    <p>This classic Spanish novel follows the adventures of Alonso Quixano, who loses his sanity and imagines himself as Don Quixote, a knight in search of chivalry.</p>
+                    <p><small class="text-muted">First Published: 1605, Estimated Sales: 500 million copies</small></p>
+                    <a href="https://www.gutenberg.org/ebooks/996" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.gutenberg.org/files/98/98-h/98-h.htm">
+                    <img src="https://i.ibb.co/CsYhg4k/0403m.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.gutenberg.org/files/98/98-h/98-h.htm">A Tale of Two Cities</a></h3>
+                    <p>A historical novel set during the French Revolution, exploring themes of resurrection, sacrifice, and social injustice</p>
+                    <p><small class="text-muted">First Published: 1859, Estimated Sales: 200 million copies</small></p>
+                    <a href="https://www.gutenberg.org/files/98/98-h/98-h.htm" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings">
+                    <img src="https://i.ibb.co/9yjT3Zt/33.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings">The Lord of the Rings </a></h3>
+                    <p>A fantasy epic about Frodo Baggins' quest to destroy the One Ring and the battle between good and evil in Middle-earth..</p>
+                    <p><small class="text-muted">First Published: 1954, Estimated Sales: 150 million copies</small></p>
+                    <a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a  href="https://anylang.net/en/books/en/little-prince">
+                    <img src="https://i.ibb.co/TM9nVGK/le-petit-prince-8.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a  href="https://anylang.net/en/books/en/little-prince">The Little Prince </a></h3>
+                    <p>A philosophical fable about a young prince who learns valuable life lessons during his travels.</p>
+                    <p><small class="text-muted">First Published: 1943, Estimated Sales: 140 million copies</small></p>
+                    <a  href="https://anylang.net/en/books/en/little-prince" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.overdrive.com/media/789876/harry-potter-and-the-sorcerers-stone">
+                    <img src="https://i.ibb.co/b28K64x/622708-F6-78-D7-453-A-A7-C5-3-FE6853-F3167-IMG400.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.overdrive.com/media/789876/harry-potter-and-the-sorcerers-stone">Harry Potter and the Sorcerer's Stone</a></h3>
+                    <p>The first book in the Harry Potter series follows Harry as he discovers his magical heritage and attends Hogwarts School.</p>
+                    <p><small class="text-muted">First Published: 1997, Estimated Sales: 120 million copies</small></p>
+                    <a href="https://www.overdrive.com/media/789876/harry-potter-and-the-sorcerers-stone" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.goodreads.com/book/show/16299.And_Then_There_Were_None">
+                    <img src="https://i.ibb.co.com/6Rd8VGy/16299.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/book/show/16299.And_Then_There_Were_None">And then There Were None</a></h3>
+                    <p>A thrilling mystery novel by Agatha Christie where ten strangers are invited to a remote island and killed one by one.</p>
+                    <p><small class="text-muted">First Published: 1939, Estimated Sales: 100 million copies</small></p>
+                    <a href="https://www.goodreads.com/book/show/16299.And_Then_There_Were_None" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.goodreads.com/book/show/17005.Dream_of_the_Red_Chamber">
+                    <img src="https://i.ibb.co.com/sHSKk5b/17005.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/book/show/17005.Dream_of_the_Red_Chamber">Dream of the Red Chamber </a></h3>
+                    <p>One of China's Four Great Classical Novels, it chronicles the rise and fall of a family in the Qing Dynasty.</p>
+                    <p><small class="text-muted">First Published: 1791, Estimated Sales: 100 million copies</small></p>
+                    <a href="https://www.goodreads.com/book/show/17005.Dream_of_the_Red_Chamber" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://www.goodreads.com/book/show/5907.The_Hobbit_or_There_and_Back_Again">
+                    <img src="https://i.ibb.co.com/sFWN7g8/5907.jpg" alt="Don Quixote">
+                </a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/book/show/5907.The_Hobbit_or_There_and_Back_Again">The Hobbit </a></h3>
+                    <p>A fantasy novel about the quest of home-loving hobbit Bilbo Baggins to win a share of a treasure guarded by a dragon.</p>
+                    <p><small class="text-muted">First Published: 1937, Estimated Sales: 100 million copies</small></p>
+                    <a href="https://www.goodreads.com/book/show/5907.The_Hobbit_or_There_and_Back_Again" class="view-all-btn">Read more</a>
+                </div>
+            </div>
+    
+            
+
+
+
+    
+
+            
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <h3 style=" color: white;">Bookverse</h3> 
+        <p style="color: white;">&copy; Togzhan Oral - September 2024</p>
+        <div class="social-icons">
+        </div>
+
+        <script src="java.js"></script>
+    </footer>
+</body>
+</html>

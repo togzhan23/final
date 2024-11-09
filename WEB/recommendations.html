@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="java.js"></script>
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+
+
+</head>
+<body>
+    <style>
+        .book-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: scale(1.02); 
+}
+header {
+          background-color: #1e1d1d; 
+          color: rgb(255, 255, 255);
+          padding: 1rem; /* Reduced padding to make it more compact */
+          text-align: center;
+        }
+        
+        h2 {
+          font-size: 1.8rem; /* Slightly smaller logo size */
+          margin-bottom: 1rem; /* Reduced space between logo and nav */
+        }
+        
+        /* Navigation styling */
+        nav {
+          margin-bottom: 0.5rem; /* Reduced space between nav and controls */
+        }
+        
+        nav ul {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          margin: 0;
+        }
+        
+        nav li {
+          list-style: none;
+          margin: 0 8px; /* Reduced horizontal margin between items */
+        }
+        
+        nav a {
+          text-decoration: none;
+          color: #fff; /* White text color for navigation */
+          font-weight: 500;
+        }
+        
+        nav a:hover {
+          color: #0073e6;
+        }
+        
+        /* Controls on the right */
+        .controls {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 10px; /* Positioning controls on the right */
+          top: 10px; /* Positioning controls towards the top */
+          gap: 8px; /* Reduced gap between icons */
+        }
+        
+        .profile-icon, .theme-icon {
+          width: 37px; /* Smaller icons */
+          height: 37px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+
+
+    </style>
+   <header>
+    <div class="container d-flex flex-column align-items-center top-bar">
+    
+      <h2>Bookverse</h2>
+
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="genres.html">Book Genres</a></li>
+          <li><a href="best-sellers.html">Best Sellers</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="test.html">Finder</a></li>
+
+        </ul>
+      </nav>
+  
+      
+      <div class="controls d-flex align-items-center">
+        <a href="profile.html">
+          <img class="profile-icon" src="https://i.ibb.co/ZJG8B5H/user-profile-icon-free-vector.jpg" alt="Profile Icon">
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+    
+    <main>
+        <section id="best-sellers">
+            <h2>Our Recommendations: movies based on novels</h2>
+            <hr>
+
+            <div class="book-item">
+                <a href="https://youtu.be/Aw7Eln_xuWc?si=goF9FWwREICv2Vqv"><img src="https://i.ibb.co/NW3qp94/91bx-BYl307-L-AC-UF1000-1000-QL80.jpg" alt="Divergent"></a>
+                <div>
+                    <h3>Divergent</h3>
+                    <p>Author: Veronica Roth</p>
+                    <p>A dystopian novel about a society divided into factions based on virtues. The protagonist, Tris, discovers she is Divergent and uncovers a conspiracy threatening the system.</p>
+                    <div class="rating">
+                        <li><a href="https://allnovel.net/divergent-divergent-1.html">Read the book!</a></li>
+                        <p style="font-family: Arial, Helvetica, sans-serif">Click the picture to watch the trailer of the movie!</p>
+                        <section id="rating-section">
+                        <p>Rate Your Experience</p>
+                        <div class="rating-stars">
+                                <span class="star" data-value="1">&#9733;</span>
+                                <span class="star" data-value="2">&#9733;</span>
+                                <span class="star" data-value="3">&#9733;</span>
+                                <span class="star" data-value="4">&#9733;</span>
+                                <span class="star" data-value="5">&#9733;</span>
+                        
+                        </div>
+                        <p id="rating-message-divergent">Click a star to rate!</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="book-item">
+                <a href="https://youtu.be/AwwbhhjQ9Xk?si=DYvhKmC6pBJK6oWp"><img src="https://i.ibb.co/FDkt0nc/The-Maze-Runner-cover.png" alt="Maze Runner"></a>
+                <div>
+                    <h3>Maze Runner</h3>
+                    <p>Author: James Dashner</p>
+                    <p>It follows a group of boys, including the protagonist Thomas, trapped in a massive, ever-changing maze with no memory of their previous lives. They must work together to survive and find an escape route while facing dangerous creatures called Grievers.</p>
+                    <div class="rating">
+                        <li><a href="https://allnovel.net/the-maze-runner-the-maze-runner-1.html">Read the book!</a></li>
+                        <p style="font-family: Arial, Helvetica, sans-serif">Click the picture to watch the trailer of the movie!</p>
+                        <section id="rating-section">
+                            <p>Rate Your Experience</p>
+                            <div class="rating-stars">
+                                    <span class="star" data-value="1">&#9733;</span>
+                                    <span class="star" data-value="2">&#9733;</span>
+                                    <span class="star" data-value="3">&#9733;</span>
+                                    <span class="star" data-value="4">&#9733;</span>
+                                    <span class="star" data-value="5">&#9733;</span>
+                            </div>
+                            <p id="rating-message-maze">Click a star to rate!</p>
+                        </section>     
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="book-item">
+                <a href="https://youtu.be/VyHV0BRtdxo?si=KPCWZ8-tJErLYceN"><img src="https://i.ibb.co/xL0yHp4/9780590353403.jpg" alt="Harry Potter"></a>
+                <div>
+                    <h3>Harry Potter</h3>
+                    <p>Author: J.K. Rowling</p>
+                    <p>A fantasy series about a young wizard, Harry Potter, who discovers his magical heritage on his eleventh birthday. He attends Hogwarts School of Witchcraft and Wizardry and battles the dark wizard Voldemort while uncovering the mysteries of his own past.</p>
+                    <div class="rating">
+                        <li><a href="https://en.enjoyreadinghour.com/#google_vignette">Read the book!</a></li>
+                        <p style="font-family: Arial, Helvetica, sans-serif">Click the picture to watch the trailer of the movie!</p>
+                        <section id="rating-section">
+                            <p>Rate Your Experience</p>
+                            <div class="rating-stars">
+                                    <span class="star" data-value="1">&#9733;</span>
+                                    <span class="star" data-value="2">&#9733;</span>
+                                    <span class="star" data-value="3">&#9733;</span>
+                                    <span class="star" data-value="4">&#9733;</span>
+                                    <span class="star" data-value="5">&#9733;</span>
+                            </div>
+                            <p id="rating-message-harry">Click a star to rate!</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const stars = document.querySelectorAll('.star');
+            
+                    function updateRatingMessage(starElement, messageElement) {
+                        const ratingValue = starElement.dataset.value;
+                        messageElement.textContent = `You rated this ${ratingValue} stars!`;
+                    }
+            
+                    stars.forEach(star => {
+                        star.addEventListener('click', function () {
+                            const section = this.closest('section');
+                            let messageElement = null;
+            
+                            if (section.querySelector('#rating-message-divergent')) {
+                                messageElement = document.getElementById('rating-message-divergent');
+                            } else if (section.querySelector('#rating-message-maze')) {
+                                messageElement = document.getElementById('rating-message-maze');
+                            } else if (section.querySelector('#rating-message-harry')) {
+                                messageElement = document.getElementById('rating-message-harry');
+                            }
+            
+                            
+                            const allStars = this.parentNode.querySelectorAll('.star');
+            
+                            
+                            const selectedRating = parseInt(this.dataset.value);
+            
+                            
+                            allStars.forEach((s, index) => {
+                                if (index < selectedRating) {
+                                    s.classList.add('selected');
+                                } else {
+                                    s.classList.remove('selected');
+                                }
+                            });
+            
+                            
+                            if (messageElement) {
+                                updateRatingMessage(this, messageElement);
+                            }
+                        });
+                    });
+                });
+            </script>
+ </section>
+
+<!-- --------------------more content   -->
+
+<button id="loadMoreBtn" class="button">Load More Books</button>
+    
+<div id="content"></div>
+
+<script>
+    const books = [
+        {
+            title: "Hunger Games",
+            author: "Suzanne Collins",
+            description: "Suzanne Collins is an American author best known for The Hunger Games trilogy, which explores themes of survival and rebellion in a dystopian world.",
+            image: "https://i.ibb.co/QjySnsL/The-Hunger-Games-cover.jpg",
+            readLink: "https://www.goodreads.com/series/73758-the-hunger-games",
+            trailerLink: "https://youtu.be/PbA63a7H0bo?si=AomtOUC0JLunt8R1"
+        },
+        {
+            title: "Catching Fire",
+            author: "Veronica Roth",
+            description: "A dystopian novel about a society divided into factions based on virtues. The protagonist, Tris, discovers she is Divergent and uncovers a conspiracy threatening the system.",
+            image: "https://i.ibb.co/7Cg9srf/6148028.jpg",
+            readLink: "https://www.goodreads.com/series/73758-the-hunger-games",
+            trailerLink: "https://youtu.be/EAzGXqJSDJ8?si=H4B40s-or-E9OuB8"
+        }
+    ];
+
+    let currentIndex = 0;
+    const booksToLoad = 2; 
+
+    document.getElementById('loadMoreBtn').addEventListener('click', () => {
+    const endIndex = Math.min(currentIndex + booksToLoad, books.length);
+
+    for (let i = currentIndex; i < endIndex; i++) {
+        const book = books[i];
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book-item fade-in'; 
+        bookDiv.innerHTML = `
+            <a href="${book.trailerLink}" target="_blank">
+                <img src="${book.image}" alt="${book.title}">
+            </a>
+            <div>
+                <h3>${book.title}</h3>
+                <p>Author: ${book.author}</p>
+                <p>${book.description}</p>
+                <div class="rating">
+                    <li><a href="${book.readLink}">Read the book!</a></li>
+                    <p style="font-family: Arial, Helvetica, sans-serif">Click the picture to watch the trailer of the movie!</p>
+                    <section id="rating-section"></section>
+                </div>
+            </div>
+        `;
+        document.getElementById('content').appendChild(bookDiv);
+    }
+
+    currentIndex = endIndex;
+
+    if (currentIndex >= books.length) {
+        loadMoreBtn.style.display = 'none'; 
+    }
+});
+
+</script>
+    
+
+
+
+
+
+<!-- -------------------- faq-->
+
+        <section class="faq">
+            <h3>Frequently Asked Questions</h3>
+
+            <div class="faq-question">1. How do I watch the trailer?</div>
+            <div class="faq-answer">Click on the book cover image to watch the trailer on YouTube.</div>
+
+            <div class="faq-question">2. Can I buy the book directly from here?</div>
+            <div class="faq-answer">You can click on the "Read the book!" links to purchase or access the books online.</div>
+
+            <div class="faq-question">3. How do I read the book?</div>
+            <div class="faq-answer">You can find links to read the books in the respective book sections above.</div>
+        </section>
+    </main>
+   
+      <hr>
+            
+
+      <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                answer.style.transition = 'max-height 0.5s ease-in-out';
+            });
+        });
+    </script>
+
+      <!-- ------------------------- -->
+    </main>
+    <blockquote>
+        <h3>"The best books are those that tell you what you know already." - George Orwell</h3>
+    </blockquote>
+
+
+    <footer>
+        <h3 style=" color: white;">Bookverse</h3> 
+        <p style="color: white;">&copy; Togzhan Oral - September 2024</p>
+        <div class="social-icons">
+        </div>
+
+        
+    </footer>
+</body>
+</html>

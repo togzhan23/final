@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>genres</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+   
+   
+   
+   
+   
+   
+   <style>
+
+
+
+
+
+        
+        body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(236,232,231,1) 16%, rgba(217,206,199,0.9262079831932774) 69%);
+}
+.color-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .book-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: scale(1.02); 
+}
+
+
+
+        header {
+            background-color: #1e1d1d; 
+            color: rgb(255, 255, 255);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .book-item img {
+            width: 150px;
+            height: 225px;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.05); 
+        }
+
+        .rating {
+            margin-top: 10px;
+        }
+
+        .rating span {
+            color: gold;
+        }
+
+        footer {
+            background-color: #1e1d1d;
+            text-align: center; 
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .book-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .book-item img {
+                margin-bottom: 10px;
+            }
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+        header {
+          background-color: #1e1d1d; 
+          color: rgb(255, 255, 255);
+          padding: 1rem; /* Reduced padding to make it more compact */
+          text-align: center;
+        }
+        
+        h2 {
+          font-size: 1.8rem; /* Slightly smaller logo size */
+          margin-bottom: 1rem; /* Reduced space between logo and nav */
+        }
+        
+        /* Navigation styling */
+        nav {
+          margin-bottom: 0.5rem; /* Reduced space between nav and controls */
+        }
+        
+        nav ul {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          margin: 0;
+        }
+        
+        nav li {
+          list-style: none;
+          margin: 0 8px; /* Reduced horizontal margin between items */
+        }
+        
+        nav a {
+          text-decoration: none;
+          color: #fff; /* White text color for navigation */
+          font-weight: 500;
+        }
+        
+        nav a:hover {
+          color: #0073e6;
+        }
+        
+        /* Controls on the right */
+        .controls {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 10px; /* Positioning controls on the right */
+          top: 10px; /* Positioning controls towards the top */
+          gap: 8px; /* Reduced gap between icons */
+        }
+        
+        .profile-icon, .theme-icon {
+          width: 37px; /* Smaller icons */
+          height: 37px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-column align-items-center top-bar">
+        
+          <h2>Bookverse</h2>
+    
+          <nav>
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="genres.html">Book Genres</a></li>
+              <li><a href="best-sellers.html">Best Sellers</a></li>
+              <li><a href="recommendations.html">Recommendations</a></li>
+              <li><a href="test.html">Finder</a></li>
+
+            </ul>
+          </nav>
+      
+          
+          <div class="controls d-flex align-items-center">
+            <a href="profile.html">
+              <img class="profile-icon" src="https://i.ibb.co/ZJG8B5H/user-profile-icon-free-vector.jpg" alt="Profile Icon">
+            </a>
+          </div>
+        </div>
+      </header>
+
+
+
+
+
+
+
+    
+    <main>
+        <section id="best-sellers">
+            <h2>Find your favourite genre! </h2>
+            
+
+           
+
+
+
+
+
+
+            <hr>
+            <h2>Fictional Genres </h2>
+            <hr>
+             <div class="book-item">
+                <a href="https://ibb.co.com/JyJw1Ns"><img src="https://i.ibb.co.com/JyJw1Ns/how-to-write-mystery-jpg.webp" alt="how-to-write-mystery-jpg" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Mystery</h3>
+                    <p>Mystery books involve suspenseful narratives where a crime or puzzle is central to the plot. Typically, these stories follow a detective or amateur sleuth who investigates the case, uncovering clues and solving the mystery by the end. The genre focuses on the process of discovery and the resolution of hidden secrets, often featuring unexpected twists and red herrings to keep readers engaged.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/series/49996-sherlock-holmes">"Sherlock Holmes" series by Arthur Conan Doyle</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/19288043-gone-girl">"Gone Girl" by Gillian Flynn</a></p>
+                    <p><a href="https://danbrown.com/the-davinci-code/">"The Da Vinci Code" by Dan Brown.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/Nr6Tk27"><img src="https://i.ibb.co.com/Nr6Tk27/7869.jpg" alt="7869" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Thriller</h3>
+                    <p> Thrillers are fast-paced and suspenseful, featuring high-stakes danger and unexpected twists that keep readers on edge.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/2429135.The_Girl_with_the_Dragon_Tattoo">""The Girl with the Dragon Tattoo" by Stieg Larsson</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/23807.The_Silence_of_the_Lambs">"The Silence of the Lambs" by Thomas Harris</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/7869.The_Bourne_Identity">""The Bourne Identity" by Robert Ludlum.</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-item">
+                <a href="https://youtu.be/VyHV0BRtdxo?si=KPCWZ8-tJErLYceN"><img src="https://i.ibb.co.com/xL0yHp4/9780590353403.jpg" alt="Harry Potter Book Cover"></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Fantasy</h3>
+                    <p>Fantasy books create imaginative worlds with magical elements, mythical creatures, and epic adventures, often involving quests and battles between good and evil.                    </p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings">"The Lord of the Rings" by J.R.R. Tolkien</a></p>
+                    <p><a href="https://www.goodreads.com/series/45175-harry-potter">"Harry Potter" series by J.K. Rowling</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind">"The Name of the Wind" by Patrick Rothfuss</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://ibb.co.com/YbcfsQT"><img src="https://i.ibb.co.com/YbcfsQT/1885.jpg" alt="1885" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Romance</h3>
+                    <p>Romance books focus on relationships and romantic love, exploring emotional connections and the journey of finding and maintaining love.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/1885.Pride_and_Prejudice">"Pride and Prejudice" by Jane Austen</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/10964.Outlander">"Outlander" by Diana Gabaldon</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/17347634-me-before-you">"Me Before You" by Jojo Moyes.</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/Kxp3Spx"><img src="https://i.ibb.co.com/Kxp3Spx/17245.jpg" alt="17245" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Horror</h3>
+                    <p>Horror books evoke fear and tension through frightening, unsettling, or supernatural elements, aiming to shock and disturb readers.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/11588.The_Shining">"The Shining" by Stephen King</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/17245.Dracula">"Dracula" by Bram Stoker</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/179780.The_Exorcist">"The Exorcist" by William Peter Blatty.</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+            <hr>
+            <h2> Non-Fictional Genres </h2>
+            <hr>
+             <div class="book-item">
+                <a href="https://ibb.co.com/zmPHMky"><img src="https://i.ibb.co.com/zmPHMky/48855.jpg" alt="48855" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Biography</h3>
+                    <P>Biographies are detailed accounts of a person's life, chronicling their experiences, achievements, and impact, often providing insight into their character and contributions.</P>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/48855.The_Diary_of_a_Young_Girl">"The Diary of a Young Girl" by Anne Frank</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/11084145-steve-jobs">"Steve Jobs" by Walter Isaacson</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/38746485-becoming">"Becoming" by Michelle Obama</a></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/D7yVmWS"><img src="https://i.ibb.co.com/D7yVmWS/35133922.jpg" alt="35133922" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Memoir</h3>
+                    <p>Memoirs are personal accounts of an individual's life experiences, reflecting on significant events, relationships, and personal growth with emotional depth and introspection.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/35133922-educated">"Educated" by Tara Westover</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/7445.The_Glass_Castle">"The Glass Castle" by Jeannette Walls</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/25899336-when-breath-becomes-air">"When Breath Becomes Air" by Paul Kalanithi.</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/XX98SX9"><img src="https://i.ibb.co.com/XX98SX9/43582376.jpg" alt="43582376" ></a>
+                <div>
+                    <h3></a>Health & Wellness </h3>
+                    <p>These books focus on physical and mental well-being, offering advice on nutrition, fitness, mental health, and lifestyle choices to improve overall health and quality of life.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/43582376-the-body">"The Body: A Guide for Occupants" by Bill Bryson</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/25663961-how-not-to-die">"How Not to Die" by Michael Greger</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/136012671">"The Whole30" by Melissa Hartwig.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <a href="https://ibb.co.com/k5Srnf5"><img src="https://i.ibb.co.com/k5Srnf5/11468377-2.jpg" alt="11468377-2" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Business & Economics</h3>
+                    <p>Books in this genre cover topics related to financial systems, market dynamics, management strategies, and economic principles, offering insights into how businesses operate and the factors influencing economic decision-making.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow">"Thinking, Fast and Slow" by Daniel Kahneman</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/23692271-sapiens">"Sapiens: A Brief History of Humankind" by Yuval Noah Harari</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/10127019-the-lean-startup-hardcover">"The Lean Startup" by Eric Ries</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/wgxYRk3"><img src="https://i.ibb.co.com/wgxYRk3/10959.jpg" alt="10959" ></a>
+                <div>
+                    <h3><a href="https://www.goodreads.com/genres/mystery"></a>Philosophy</h3>
+                    <p>Philosophy books explore fundamental questions about existence, knowledge, ethics, and reality, examining concepts and arguments to understand human thought and the nature of the world.</p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/30659.Meditations">""Meditations" by Marcus Aurelius</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/30289.The_Republic">"The Republic" by Plato</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/10959.Sophie_s_World">"Sophie’s World" by Jostein Gaarder.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            
+       
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+            <hr>
+            <h2> Genre Blends</h2>
+            <hr>
+             <div class="book-item">
+                <a href="https://ibb.co.com/K975LmV"><img src="https://i.ibb.co.com/K975LmV/6101718.jpg" alt="6101718" ></a>
+                <div>
+                    <h3></a>Science Fiction/Fantasy</h3>
+                    <p>This genre blends futuristic technology and speculative elements (science fiction) with imaginative worlds and magical systems (fantasy), creating adventures that stretch the limits of reality.                    </p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness"> "The Left Hand of Darkness" by Ursula K. Le Guin</a></p>
+                    <p><a href="https://www.goodreads.com/series/56399-the-expanse">"The Expanse" series by James S.A. Corey</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/6101718-the-magicians"> "The Magicians" by Lev Grossman</a></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/kmmtGPH"><img src="https://i.ibb.co.com/kmmtGPH/10964.jpg" alt="10964" ></a>
+                <div>
+                    <h3></a>Historical Romance</h3>
+                    <p>Historical romance novels combine romantic relationships with historical settings, weaving love stories into detailed depictions of past eras and events.                    </p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/10964.Outlander">"Outlander" by Diana Gabaldon</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/83144.The_Bronze_Horseman">"The Bronze Horseman" by Paullina Simons</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/37470.The_Other_Boleyn_Girl">"The Other Boleyn Girl" by Philippa Gregory</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-item">
+                <a href="https://ibb.co.com/jHM0dwt"><img src="https://i.ibb.co.com/jHM0dwt/33516773.jpg" alt="33516773" ></a>
+                <div>
+                    <h3></a>Mystery/Thriller</h3>
+                    <p>This genre blends suspenseful crime-solving with high-stakes, fast-paced action. It involves uncovering secrets and solving puzzles while maintaining intense tension and excitement.                    </p>
+                    <p><i>Examples:</i></p>
+                    <p><a href="https://www.goodreads.com/book/show/33516773-big-little-lies">"Big Little Lies" by Liane Moriarty</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/22557272-the-girl-on-the-train">"The Girl on the Train" by Paula Hawkins</a></p>
+                    <p><a href="https://www.goodreads.com/book/show/18045891-sharp-objects">"Sharp Objects" by Gillian Flynn.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <hr> 
+                <!-- ---------------------------------form genres  -->
+            <form id="multiStepForm">
+
+                <div class="form-step active">
+                    <h4>Share with your opinion on a curtain book. Choose a genre:</h4>
+                    <label for="genre">Choose a genre:</label>
+                    <select id="genre" name="genre">
+                        <option value="fantasy">Fantasy</option>
+                        <option value="science-fiction">Science Fiction</option>
+                        <option value="romance">Romance</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="horror">Horror</option> 
+                        <option value="biography">Biography</option>
+                        <option value="philosophy">Philosophy</option>
+                    </select><br><br>
+                    <button type="button" id="nextBtn">Next</button>
+                </div>
+        
+                
+                <div class="form-step">
+                    <h4>choose a Book</h4>
+                    <label for="book">Choose a book:</label>
+                    <select id="book" name="book">
+                    </select><br><br>
+                    <button type="button" id="backBtn">Back</button>
+                    <button type="button" id="nextBtn">Next</button>
+                </div>
+        
+                
+                <div class="form-step">
+                    <h4>Step 3: Review the Book</h4>
+                    <label for="review">Your Review:</label>
+                    <textarea id="review" name="review" rows="4" cols="50"></textarea><br><br>
+                    <button type="button" id="backBtn">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const steps = document.querySelectorAll('.form-step');
+                let currentStep = 0;
+            
+                const booksByGenre = {
+                    fantasy: ['Harry Potter', 'Lord of the Rings', 'The name of the Wind'],
+                    'science-fiction': ['Dune', 'Ender\'s Game'],
+                    romance: ['Pride and Prejudice', 'The Notebook', 'Me Before You'],
+                    mystery: ['Sherlock Holmes', 'Gone Girl', 'The Da Vinci Code'],
+                    horror: ['The Shining', 'Drcula', 'The Exorcist'],
+                    philosophy: ['Meditations', 'The Republic', 'The Sophys World'],
+                    biography: ['The Diary of a Young girl', 'Steve Jobs', 'TBecoming'],
+                    thriller: ['TBig little Lies', 'The Girl on the Train', 'Sharp objects ']
+
+                };
+            
+                function showStep(step) {
+                    steps.forEach((formStep, index) => {
+                        formStep.classList.toggle('active', index === step);
+                    });
+                }
+            
+                function handleNext() {
+                    if (currentStep === 0) {
+                        
+                        const selectedGenre = document.getElementById('genre').value;
+                        const bookSelect = document.getElementById('book');
+                        bookSelect.innerHTML = ''; 
+                        booksByGenre[selectedGenre].forEach(book => {
+                            const option = document.createElement('option');
+                            option.value = book;
+                            option.textContent = book;
+                            bookSelect.appendChild(option);
+                        });
+                    }
+            
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                }
+            
+                function handleBack() {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                }
+            
+                const nextButtons = document.querySelectorAll('#nextBtn');
+                const backButtons = document.querySelectorAll('#backBtn');
+            
+                nextButtons.forEach(button => {
+                    button.addEventListener('click', handleNext);
+                }); 
+            
+                backButtons.forEach(button => {
+                    button.addEventListener('click', handleBack);
+                });
+            
+                showStep(currentStep); 
+            });</script>
+
+
+            <!------------------------------colour   -->
+            <hr> 
+            
+            <button class="color-button" id="changeColorBtn">Change Background Color</button>
+
+
+    <script>
+        
+        function changeBackgroundColor() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F4D03F', '#8E44AD', '#1ABC9C', '#E74C3C'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        
+        document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
+    </script>
+ 
+<!------------------------------  -->
+
+            
+        
+    </main>
+    
+      <footer>
+        <h3 style=" color: white;">Bookverse</h3> 
+        <p style="color: white;">&copy; Togzhan Oral - September 2024</p>
+        <div class="social-icons">
+        </div>
+    </footer>
+
+
+    <script src="java.js"></script>
+
+</body>
+</html>

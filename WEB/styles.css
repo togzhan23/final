@@ -1,0 +1,440 @@
+
+
+ 
+        
+   
+        h2 {
+          font-size: 1.8rem; /* Slightly smaller logo size */
+          margin-bottom: 0.5rem; /* Reduced space between logo and nav */
+        }
+        
+        /* Navigation styling */
+        nav {
+          margin-bottom: 0.5rem; /* Reduced space between nav and controls */
+        }
+        
+        nav ul {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          margin: 0;
+        }
+        
+        nav li {
+          list-style: none;
+          margin: 0 8px; /* Reduced horizontal margin between items */
+        }
+        
+        nav a {
+          text-decoration: none;
+          color: #fff; /* White text color for navigation */
+          font-weight: 500;
+        }
+        
+        nav a:hover {
+          color: #0073e6;
+        }
+        
+        /* Controls on the right */
+        .controls {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 10px; /* Positioning controls on the right */
+          top: 10px; /* Positioning controls towards the top */
+          gap: 8px; /* Reduced gap between icons */
+        }
+        
+        .profile-icon, .theme-icon {
+          width: 28px; /* Smaller icons */
+          height: 28px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+
+
+
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------ автроры */
+
+
+.sidebar {
+    margin-bottom: 20px;
+}
+
+.author-cards {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+}
+
+.author-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 22%; 
+    margin: 0 1%; 
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.author-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.author-card h4, .author-card h5 {
+    margin: 10px 0 0;
+    font-size: 18px; 
+}
+
+.author-card a {
+    text-decoration: none;
+    color: #007bff; 
+}
+
+.author-card a:hover {
+    text-decoration: underline;
+}
+
+.author-card p {
+    font-size: 14px; 
+    margin: 5px 0;
+}
+
+.author-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.author-card ul li {
+    margin: 5px 0;
+}
+
+ 
+
+
+
+/*--------------------------date style  */ 
+.date-time-display {
+    font-size: 24px; 
+    margin: 20px 0;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+}
+
+
+
+/*-------------------------- */
+
+
+
+        header {
+            background-color: #fff; 
+            color: rgb(255, 255, 255);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .book-item img {
+            width: 150px;
+            height: 225px;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.05); 
+        }
+
+        .rating {
+            margin-top: 10px;
+        }
+
+        .rating span {
+            color: gold;
+        }
+
+        footer {
+            background-color: #1e1d1d;
+            text-align: center; 
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .book-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .book-item img {
+                margin-bottom: 10px;
+            }
+        }
+
+/* ------------------- from recommendations */ 
+
+
+
+#content {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.book-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.book-item img {
+    width: 150px;
+    height: auto;
+}
+
+.book-item div {
+    max-width: 600px; 
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+.rating-stars {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.star {
+    color: #ffffff; 
+}
+
+.star.selected {
+    color: #f2ff00; 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(236,232,231,1) 16%, rgba(217,206,199,0.9262079831932774) 69%);
+}
+
+
+header {
+    background-color: #1e1d1d; 
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+section {
+    margin: 20px;
+}
+
+
+
+
+.book-item img {
+    width: 150px;
+    height: 225px;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.book-item img:hover {
+    transform: scale(1.05); 
+}
+
+
+.rating {
+    margin-top: 10px;
+}
+
+.rating span {
+    color: gold;
+}
+
+
+footer {
+    background-color: #1e1d1d;
+    text-align: center; 
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .book-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-item img {
+        margin-bottom: 10px;
+    }
+}
+
+
+.faq {
+    margin-top: 30px;
+}
+
+.faq-question {
+    background-color: #f8f9fa;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #e2e6ea;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+.button {
+    background-color: #007BFF; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
